@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+</head>
+<body>
+  <h1>Object</h1>
+  <h2>Create</h2>
+  <script>
+    var family = {
+      "돼지":"현진",
+      "귀요미":"폴라"
+    };
+    document.write("돼지:"+family.돼지+"<br>");
+    document.write("귀요미:"+family.귀요미+"<br>");
+    family.왕돼지 = "윤성";
+    document.write("왕돼지:"+family.왕돼지+"<br>");
+    family["귀여운 돼지"]="엄마";
+    document.write("귀여운 돼지:"+family["귀여운 돼지"]+"<br>");
+  </script>
+  <h2>Iterate</h2>
+  <script>
+    for(var key in family){
+      document.write(key+' : ' +family[key]+'<br>');
+    }
+  </script>
+  <h2>Property & Method</h2>
+  <script>
+    family.showAll = function(){
+      for(var key in this){
+        document.write(key+' : ' +this[key]+'<br>');
+      }
+    }
+    family.showAll();
+  </script>
+</body>
+</html>
